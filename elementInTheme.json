@@ -1,0 +1,14 @@
+[
+    {"name":"narrative","optionSelector":".single-option-selector"},
+    {"name":"jumpstart","optionSelector":".single-option-selector"},
+    {"name":"boundless","optionSelector":".single-option-selector"},  
+    {"name":"simple","optionSelector":".single-option-selector"},
+    {"name":"supply","optionSelector":".single-option-selector"},
+    {"name":"debut","optionSelector":".single-option-selector"},
+    {"name":"venture","optionSelector":".single-option-selector"},
+    {"name":"brooklyn","optionSelector":".single-option-selector"}, 
+    {"name":"pop","optionSelector":".single-option-selector"},
+    {"name":"minimal","optionSelector":".single-option-selector"},
+    {"name":"Fashionopolism","optionSelector":".single-option-selector"}
+ ]
+ 

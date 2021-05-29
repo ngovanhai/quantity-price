@@ -1,0 +1,59 @@
+.info {
+    background-color: #dceaf8;
+    border-left: 6px solid #2196F3;
+    padding: 5px 15px;
+    line-height: 25px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #4e4e4e;
+} 
+
+.content-global{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0px;
+    background: #fff;
+    margin-top: 15px;
+    box-shadow: 1px 2px 9px #c8c8c857;
+}
+.content-global .col-md-3 button{
+    margin-top: 50%;
+}
+.discount{
+    width: 69% !important;
+    float: left;
+}
+.addTies{
+    cursor: pointer;
+     
+}
+.content-global table tr td{
+    padding:5px;
+}
+.btnradios{
+  width: 30% !important;
+  float: left;
+} 
+ 
+.discount_type{
+    width: 30% !important;
+    float: left;
+    border-left: none;
+}
+.ot-input-quantity{
+    width: 100%;    
+    margin: unset;
+}
+ 
+.content-global .table-responsive{
+    margin: unset !important;
+}
+@media only screen and  (max-width: 768px){
+    .content-global{
+        width: 92% !important;
+    }
+    .ot-input-quantity{
+        width: 100% !important;
+    }
+}
+  

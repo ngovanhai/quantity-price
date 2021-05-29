@@ -1,0 +1,337 @@
+ /* .groupsTable{
+     margin-top: 15px;
+ } */
+ .form-control:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255,0) !important;
+ }
+ .wrapper_settings{ 
+    width: 90%;
+    margin: 15px auto;
+ }
+ .ot-setting-global{
+    padding: 15px;
+    background: #fff;
+    margin: -15px 0px 15px 0px;
+ }
+ .ot-setting-quantity{
+    padding: 15px;
+    background: #fff; 
+    margin: 15px 0px;
+ }
+ .ot-setting-limit{
+    padding: 15px;
+    background: #fff;
+    margin: 15px 0px;
+ }
+ .wp_settings .md-layout-item{
+    background: #ffffff
+}
+.quantitySlide {
+    width: 100%;
+    margin: 10px;
+}
+.slick-slide img {
+    display: block;
+    width:100%;
+}
+.slick-initialized .slick-slide{
+    margin:0px 5px;
+    padding: 0px 10px;
+}
+.listDiscount{
+    text-align: center;
+    border: 1px solid #a0a0a0;
+    padding: 10px 0px;
+}
+.listDiscount p{
+    margin-bottom:5px;
+}
+.slick-prev, .slick-next {
+    background: none !important;
+    width: 30px;
+    height: 30px;
+}
+.slick-prev:before, .slick-next:before{
+    color: #474747 !important;
+}
+.quantity-slide .slick-prev:before {
+    content: "<";   
+    color: #474747 !important;
+}
+.quantity-slide .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #525252;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.quantity-slide .slick-next:before {
+    content: ">";
+    color: #474747 !important;
+}
+.listDiscount span{
+    color: #da2f0c;
+    font-weight: bold;
+}
+ .settings_limit .md-layout-item, .settings_quantity .md-layout-item{
+     padding: 15px;
+ }
+ 
+.background-orange{
+    background: rgb(243, 156, 18);
+    color:#fff !important;
+}  
+.priceGroupList tr td, .priceGroupList tr th, .productLimits tr td, .productLimits tr th {
+    border: 1px solid #332738;
+    padding: 5px 7px;
+    text-align: left; 
+
+}
+/* .groupsTable{
+    width: 50%;
+    margin-top: 26%;
+    margin-left: 51%;
+} */
+.priceGroupList tr th, .productLimits tr th{
+    font-size: 13px;
+}
+.priceGroupList tr td, .productLimits tr td{
+    font-size: 11px;
+}
+.limit-header, .quantity-break-header{
+    font-size: 14px !important;
+}
+ 
+.ot-setting-global,.ot-setting-limit,.ot-setting-quantity{
+    padding-bottom: 55px;
+}
+.priceGroupList, .productLimits {
+    border: 1px solid #332738;
+    width: 100%;
+    font-size: 15;
+    color: #555555;
+}
+.quantity-break-header, .limit-header {
+    font-size: 24px;
+    color: #333333; 
+}
+.wp_settings label{
+    font-weight: 100;
+    color: #848484;
+    font-size: 12px;
+}
+.ot-title-tags{
+    font-weight: bold;
+    font-size: 16px;
+    /* background: #8a898942; */
+    margin: -15px;
+    margin-bottom: 15px;
+    padding: 7px 0px;
+    color: #5d5c5c;
+    padding-left: 15px;
+}
+.wrapper_settings .card{
+    margin-bottom: 15px;
+}
+.ot-preview{
+    padding-top: 0px;
+    /* background-image: url("../images/demo_bg.png");
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle{
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-outline-primary{
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-outline-primary:hover {
+    color: #f4f6f8 !important;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus{
+    box-shadow: 0 0 0 0.2rem #17a2b8 !important;
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem #17a2b8 !important;
+}
+/*LAYOUT CARD*/
+.layoutCard{
+    display: flex;
+    padding-left: 0px;
+}
+.layoutCard .listDiscount{
+    list-style-type: none;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin: 0 2% 2% 0;
+    transition: .2s ease;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+    padding-right: 35px;
+}
+.listDiscount:hover{
+    border: 1px solid #00c167;
+    box-shadow: 0 0 0 1px #00c167;
+    background-color: #fff;
+}
+.layoutCard .listDiscount .col-left span{
+    font-size: 38px;
+    color: #00c167;
+    font-weight: 300;
+    align-items: baseline;
+    padding: 0 10px 0 0;
+}
+.layoutCard .listDiscount .col-left{
+    color: #00c167;
+    flex: 0 0 auto;
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+.layoutCard .listDiscount .col-right{
+    padding-top: 5px;
+}
+.layoutCard .listDiscount .totalAmount{
+    font-size: 1rem;
+    line-height: 1.3;
+    font-family: montserrat;
+    font-weight: 600;
+    padding-left: 1px;
+    letter-spacing: .03rem;
+    flex: 0 0 auto;
+    align-items: baseline;
+    box-sizing: inherit;
+    color: #757575;
+    text-align: center;
+}
+.layoutCard .listDiscount .pricePerProduct{
+    font-size: .625rem;
+    color: #9e9e9e;
+    margin-top: .2rem;
+    padding-left: 1px;
+    flex: 1 0 20px;
+    text-align: right;
+    margin-bottom: 0px;
+}
+.layoutCard .listDiscount .discountPercentProduct{
+    font-size: .7rem;
+    color: #fff;
+    background-color: #ff5722;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: 400;
+    position: absolute;
+    right: -2px;
+    bottom: 22px;
+}
+@media only screen and (max-width: 768px){ 
+    /* .groupsTable{
+        width: 100% !important;
+        margin: 20px auto !important;
+    } */
+    .ot-preview{
+        background-image:unset;
+        background:#fff;
+    }
+}
+@media only screen and (max-width: 2275px){ 
+    /* .groupsTable{
+        width: 50%;
+        margin-top: 24%;
+        margin-left: 48%; 
+    } */
+}
+@media only screen and (max-width: 2048px){ 
+    /* .groupsTable{
+        width: 50%;
+        margin-top: 26%;
+        margin-left: 51%;
+    } */
+    .priceGroupList tr th, .productLimits tr th{
+        font-size: 13px;
+    }
+    .priceGroupList tr td, .productLimits tr td{
+        font-size: 11px;
+    }
+    .limit-header, .quantity-break-header{
+        font-size: 14px !important;
+    }
+}
+@media only screen and (max-width: 1860px){ 
+    /* .groupsTable{
+        width: 50%; 
+        margin-top: 26%;
+        margin-left: 50%;
+    } */
+    .priceGroupList tr th, .productLimits tr th{
+        font-size: 9px;
+    }
+    .priceGroupList tr td, .productLimits tr td{
+        font-size: 10px;
+    }
+    .limit-header, .quantity-break-header{
+        font-size: 13px !important;
+    }
+}
+@media only screen and (max-width: 1638px){ 
+    /* .groupsTable{
+        width: 50%; 
+        margin-top: 26%;
+        margin-left: 50%;
+    } */
+    .priceGroupList tr th, .productLimits tr th{
+        font-size: 8px;
+    }
+    .priceGroupList tr td, .productLimits tr td{
+        font-size: 10px;
+    }
+    .limit-header, .quantity-break-header{
+        font-size: 13px !important;
+    }
+}
+@media only screen and (max-width: 1366px){ 
+    /* .groupsTable{
+        width: 50%; 
+        margin-top: 26%;
+        margin-left: 50%;
+    } */
+    .priceGroupList tr th, .productLimits tr th{
+        font-size: 5px;
+    }
+    .priceGroupList tr td, .productLimits tr td{
+        font-size: 9px;
+    }
+    .limit-header, .quantity-break-header{
+        font-size: 7px !important;
+    }
+}
+@media only screen and (max-width: 1170px){ 
+    /* .groupsTable{
+        width: 50%; 
+        margin-top: 26%;
+        margin-left: 50%;
+    } */
+    .priceGroupList tr th, .productLimits tr th{
+        font-size: 4px;
+    }
+    .priceGroupList tr td, .productLimits tr td{
+        padding:3px;
+        font-size: 5px;
+    }
+    .limit-header, .quantity-break-header{
+        font-size: 6px !important;
+    }
+}

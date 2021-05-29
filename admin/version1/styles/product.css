@@ -1,0 +1,178 @@
+/* RETRO */
+.otQuantityTitleListProduct,.otQuantityTitleListVariant{ 
+    COLOR: #4a4a4a;
+    FONT-WEIGHT: BOLD;
+    padding: 7px 0px;
+    margin: 0px -10px 5px -10px; 
+    margin-bottom: 17px;  
+    background: none;
+    text-align: left;
+    padding-left: 15px;
+    text-transform: inherit;
+    font-size: 16px;
+}
+.otProductList{
+    margin-top: 5px;
+}
+.btn-delete,.btn-danger{
+    background-color: #b02b13;
+    border-color: #b02b13;
+}
+.otProductList .actions{
+    width:80px;
+    vertical-align: middle;
+}
+.title_product{
+    cursor: pointer;
+}
+.product_rule 
+.multiselect__option--highlight:after,.multiselect__option:after{
+    display: none !important;
+}
+.table-success{
+    background: #f3f5d9 !important;
+    background-color: #f3f5d9 !important;
+}
+input::-webkit-input-placeholder {
+    font-size: 13px;
+    line-height: 3;
+}
+.product_rule{
+    padding: 5px;
+    background: #fff;
+    box-shadow: 1px 2px 9px #0000000d;
+}
+#hasRule .col-sm-9{
+    padding-top: 8px;
+}
+#hasRule .col-sm-3{
+    display: none;
+}
+.table-responsive{
+    margin-top: 10%;
+}
+.ot-input-quantity{
+    width: 100%;
+    margin: unset;
+}
+.custom-control-inline {  
+    margin-right: 0rem;
+}
+.titleVariantChoosen{
+    background: #b1b1b1;
+    color: #fff;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 15px;
+}
+.info {
+background-color: #dceaf8;
+border-left: 6px solid #2196F3;
+padding: 5px 15px;
+line-height: 25px;
+font-size: 13px;
+margin-bottom: 10px;
+color: #4e4e4e;
+} 
+.product_rule .btnradios span{
+    font-size: 12px;
+}
+.btnradios{
+    width: 30% !important;
+    float: left;
+}
+ 
+
+
+.btnradios .btn-secondary:first-child{
+    border-radius: 0px;
+}
+.fillterCollection .form-control{
+    width: 45%; 
+    float: left;
+    
+    border-right: none;
+    border-radius: 0px;
+}
+.fillterCollection .multiselect{
+    width: 55%; 
+    float: left;
+}
+    
+.fillterCollection  .multiselect__tags{
+    border-radius: 0;
+}
+.fillterCollection  .multiselect__content-wrapper{
+    overflow-x: hidden;
+    width: 182%;
+}
+.multiselect__tags {
+    min-height: 40px;
+    display: block;
+    padding: 8px 40px 0 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da !important;
+    background: #fff;
+    font-size: 14px;
+}
+
+.table td, .table th{
+    padding: 5px;
+}
+ 
+
+@media only screen and (max-width: 1366px){ 
+    .otQuantityTitleListProduct,.otQuantityTitleListVariant{
+        font-size: 12px;
+    }
+    .labelHasRule{
+        position: absolute;
+        font-size: 12px;
+        width: 100%;
+    } 
+    .multiselect__option--highlight {
+        background: #41b883;
+        outline: none;
+        color: #fff;
+        font-size: 11px;
+    }
+    .otProductList .table>thead>tr>th,.otProductList  .table>tbody>tr>th,.otProductList  .table>tfoot>tr>th,.otProductList  .table>thead>tr>td,.otProductList  .table>tbody>tr>td,.otProductList  .table>tfoot>tr>td {
+        border-top: none !important;
+        border-bottom: none !important;
+        font-size: 14px;
+    }
+    .table>thead>tr>th,.product_rule  .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td,  .table>tbody>tr>td,.table>tfoot>tr>td {
+        border-top: none !important;
+        border-bottom: none !important;
+        font-size: 14px;
+    }
+    .quantityProduct .btn,.quantityProduct label,.btnradios{
+        font-size: 12px;
+    }
+   
+}
+
+@media only screen and (min-width: 768px) {
+    .selectColletion{
+        width: 8%;
+    }
+    .titleColletion{
+        width: 30%;   
+    }
+    .countProduct{
+        width: 20%;   
+    }
+    .ruleCollection{
+        width: 22%;   
+    }
+    .action{
+        width: 20%;  
+    }
+    .ot-input-quantity{
+        /* width: 70% !important; */
+    }
+
+
+}
+
+    

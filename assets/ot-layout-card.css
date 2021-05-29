@@ -1,0 +1,87 @@
+.ot-card-total{
+    font-size: 1rem;
+    line-height: 1.3;
+    font-family: montserrat;
+    font-weight: 600;
+    padding-left: 1px;
+    letter-spacing: .03rem;
+    flex: 0 0 auto;
+    align-items: baseline;
+    box-sizing: inherit;
+    color: #757575;
+    text-align: center
+}
+.ot-card-discount-product {
+    font-size: .7rem;
+    color: #fff;
+    background-color: #ff5722;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: 400;
+    position: absolute;
+    right: -2px;
+    bottom: 22px;
+}
+.ot-card-price-product{
+    font-size: .625rem;
+    color: #9e9e9e;
+    margin-top: .2rem;
+    padding-left: 1px;
+    flex: 1 0 20px;
+    text-align: right;
+    margin-bottom: 0px;
+}
+.listDiscount{
+    display:flex; 
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin: 0 2% 2% 0;
+    transition: .2s ease;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+    padding-right: 35px;
+}
+.listDiscount:hover,.quantity-card .active{
+    border: 1px solid #00c167;
+    box-shadow: 0 0 0 1px #00c167;
+    background-color: #fff;
+}
+.quantity-card{
+    display:flex;
+}
+.otTableOffer .otPricePerProduct{
+    font-style: italic;
+}
+.otTableOffer .otTotalPrice{
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-right: 5px;
+}
+.ot-card-left span{ 
+    font-size: 38px;
+    font-weight: 300;
+    align-items: baseline;  
+    padding: 0 10px 0 0; 
+}
+.ot-card-left{
+    color: #00c167; 
+    flex: 0 0 auto;
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+.ot-card-right{
+    padding-top: 5px;
+} 
+@media only screen and (max-width: 768px){
+    .quantity-card{
+        display:block;
+    }
+}

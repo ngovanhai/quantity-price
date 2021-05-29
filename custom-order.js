@@ -1,0 +1,1 @@
+$.getScript(`https://apps.omegatheme.com/group-price-attribute/app_old.js?v=10`)

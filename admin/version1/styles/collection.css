@@ -1,0 +1,80 @@
+#hasRule .col-sm-9{
+    padding-top: 8px;
+} 
+/* .modal-content{
+    max-height: 700px;
+    overflow-y: scroll;
+} */
+.ot-input-quantity{
+   width: 100%;   
+}
+.table-responsive{
+    margin-top: 10%;
+}
+.bg_wrapper_collections .actions{
+    width: 105px;
+}
+.actions{
+    width:80px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
+.info {
+    background-color: #dceaf8;
+    border-left: 6px solid #2196F3;
+    padding: 5px 15px;
+    line-height: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #4e4e4e;
+} 
+.btnradios{
+    width: 30% !important; 
+    float: left;
+  } 
+ 
+  
+  #hasRule__BV_label_{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.form-row .col-sm-9{
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 10px;
+}
+  @media only screen and (min-width: 768px) {
+    .selectColletion{
+        width: 8%;
+    }
+    .titleColletion{
+        width: 30%;   
+    }
+    .countProduct{
+        width: 20%;   
+    }
+    .ruleCollection{
+        width: 22%;   
+    }
+    .actions{
+        width:80px;
+        vertical-align: middle;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .ot-input-quantity{
+        width: 100% !important;
+    }
+
+}
+.input-group .btn{
+    line-height: 18px;
+}
+@media (min-width: 576px){
+    .modal-dialog{
+        max-width: 60% !important;
+    }
+}

@@ -1,0 +1,24 @@
+<!-- // https://dev.omegatheme.com/group-price-attribute/cron/cronData.php?shop= -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<?php
+  $shop = $_GET['shop']; 
+?>
+<script>
+    innsertProductInSub();
+    function innsertProductInSub(){
+        $.ajax({
+            url: 'convert_db.php',
+            type: 'GET',
+            data: {shop:'<?php echo $shop ?>',action:'getProduct'}
+        }).done((result) => {  
+           
+            for(var i=1; i <= result ; i++){
+                updateNewDB(pages)
+            } 
+        });
+    } 
+    
+</script>
+ 
+ 
+ 

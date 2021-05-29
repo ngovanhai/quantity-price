@@ -1,0 +1,89 @@
+<div class="invalidError" ng-show="limit.showError">{{limit.invalidMsg}}</div>
+<div layout="row" layout-wrap>
+    <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+        <div>
+            <md-card>
+                <span class="cartTitle">Product list</span>
+                <md-card-content>
+                    <table ng-table="limit.tableParams" class="table" show-filter="true">
+                        <tr ng-repeat="user in $data" ng-click="limit.selectProduct(user)">
+                            <td filter="{ title: 'text'}">
+                                <img class="hasCustom" src="./images/hasCustom.png" ng-show="user.hasBreak">
+                                <img ng-src="{{user.image.src}}" class="productImg">{{user.title}}
+                            </td>
+                        </tr>
+                    </table>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+    <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+        <div>
+            <md-card>
+                <span class="cartTitle">Variant</span>
+                <md-card-content>
+                    <md-radio-group ng-model="limit.selectedVariant" ng-change="limit.selectVariant()">
+                        <md-radio-button ng-repeat="variant in limit.variantList" value="{{variant.id}}" aria-label="{{variant.title}}" ng-disabled="variant.customVariant">
+                        {{variant.title}} - {{variant.price}}
+                        </md-radio-button>
+                    </md-radio-group>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+    <div layout="column" flex="40" flex-sm="100" flex-xs="100">
+        <md-card>
+            <span class="cartTitle">Limit</span>
+            <md-card-content>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <md-input-container>
+                                <label>Min</label>
+                                <input type="number" ng-model="limit.min">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container>
+                                <label>Max</label>
+                                <input type="number" ng-model="limit.max">
+                            </md-input-container>
+                        </td>
+                        <td ng-show="limit.min || limit.max">
+                            <md-button ng-cloak md-no-ink class="btnList md-raised md-warn md-fab md-mini" ng-click="limit.deleteLimit()" title="Delete limit"><i class="material-icons">delete</i></md-button>
+                        </td>
+                    </tr>
+                </table>
+                <div layout="row" layout-align="end center">
+                    <md-button class="saveVariantLimit md-primary md-raised" ng-click="limit.saveVariantLimit()" ng-disabled="limit.disableSaveVariantLimit || !limit.selectedVariant">Save</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+        <md-card>
+            <span class="cartTitle">Limit whole store</span>
+            <md-card-content>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <md-input-container>
+                                <label>Min</label>
+                                <input type="number" ng-model="limit.wholeLimit.min">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container>
+                                <label>Max</label>
+                                <input type="number" ng-model="limit.wholeLimit.max">
+                            </md-input-container>
+                        </td>
+                    </tr>
+                </table>
+                <p style="color: red; font-weight: bold; font-size: 12px;">if you use this function, all variations of the product on the store will be set the same limits.
+There is no delete function simultaneously, so you must enter each variation of the product to remove or change the value</p>
+                <div layout="row" layout-align="end center">
+                    <md-button class="saveVariantLimit md-primary md-raised" ng-click="limit.saveWholeLimit()" ng-disabled="limit.disableSaveWholeVariantLimit">Save</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

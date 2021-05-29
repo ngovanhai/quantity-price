@@ -1,0 +1,86 @@
+.btn-primary {
+    color: #fff;
+    background-color: #5563c1 !important;
+    border-color: #5563c1 !important;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #5563c1;
+}
+
+.info {
+    background-color: #dceaf8;
+    border-left: 6px solid #2196F3;
+    padding: 5px 15px;
+    line-height: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #4e4e4e;
+} 
+.selectpicker{
+    width: 55%;
+    float: right;
+    border-radius: 0px;
+}
+.search_variant {
+    width: 44% !important;
+    float: left;
+    border-right: none;
+    border-radius: 0px;
+}
+.fillterCollection .multiselect{
+    width: 55%; 
+    float: left;
+}
+ 
+.fillterCollection  .multiselect__tags{
+    border-radius: 0;
+}
+.fillterCollection  .multiselect__content-wrapper{
+    overflow-x: hidden;
+    width: 182%;
+}
+.multiselect__tags {
+    min-height: calc(2.25rem + 2px);
+    display: block;
+    padding: 8px 40px 0 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da !important;
+    background: #fff;
+    font-size: 14px;
+}
+.fillterCollection  .multiselect__tags{
+    border-radius: 0px; 
+}
+.fillterCollection .multiselect{
+    width: 55%;
+    float: right;
+}
+.listRuleLimitFollow li{
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+.listRuleCustomertag .btn-default{
+    float: initial;
+    margin-right: 0 !important;
+}
+@media only screen and  (max-width: 768px){
+    .ot-pt-20-small{
+        padding-top: 20px;
+    }
+}
+.table-responsive{
+    width: 100% !important;
+}
+.btn-default{
+    margin-right: 47px;
+    float: right;
+}
+#hasRule__BV_label_{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.form-row .col-sm-9{
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 10px;
+}

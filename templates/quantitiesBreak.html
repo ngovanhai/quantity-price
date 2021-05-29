@@ -1,0 +1,106 @@
+<div layout="row" layout-wrap>
+    <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+        <md-card>
+            <span class="cartTitle">Product list</span>
+            <md-card-content>
+                <table ng-table="main.tableParams" class="table" show-filter="true">
+                    <tr ng-repeat="user in $data" ng-click="main.selectProduct(user)">
+                        <td filter="{ title: 'text'}">
+                            <img class="hasCustom" src="./images/hasCustom.png" ng-show="user.hasBreak">
+                            <img ng-src="{{user.image.src}}" class="productImg">{{user.title}}
+                        </td>
+                    </tr>
+                </table>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+        <md-card>
+            <span class="cartTitle">Variant</span>
+            <md-card-content style="max-height: 425px; overflow: auto;">
+                <md-radio-group ng-model="main.selectedVariant" ng-change="main.selectVariant()">
+                    <md-radio-button ng-repeat="variant in main.variantList" value="{{variant.id}}" ng-disabled="variant.customVariant">
+                        {{variant.title}} - {{variant.price}} {{main.curreny}}
+                    </md-radio-button>
+                </md-radio-group>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="column" flex="40" flex-sm="100" flex-xs="100">
+        <md-card>
+            <span class="cartTitle">Quantity price</span>
+            <md-card-content>
+                <table style="width: 100%">
+                    <tr>
+                        <th style="width: 35%">Quantity</th>
+                        <th style="width: 35%">Price({{main.curreny}})</th>
+                        <th style="width: 20%">
+                            Percent
+                        </th>
+                        <th style="width: 20%">
+                            Group
+                        </th> 
+                     </tr>
+                    <tr ng-model="group.id" ng-repeat="group in main.groups">
+                        <td>
+                    <md-input-container>
+                        <input type="number" ng-model="group.number" class="customInputPriceGroup">
+                        <span class="andAbove">and above</span>
+                    </md-input-container>
+                    </td>
+                    <td>
+                    <md-input-container>
+                        <input type="number" ng-model="group.price" ng-change="main.calculatePercent(main.selectedVariant, $index)">
+                    </md-input-container>
+                    </td>
+                    <td>
+                    <md-input-container>
+                        <input type="number" ng-model="group.percent" ng-change="main.calculatePrice(main.selectedVariant, $index)">
+                    </md-input-container>
+                    </td>
+                    <td>
+                    <md-button ng-cloak md-no-ink class="btnList md-raised md-warn md-fab md-mini" ng-click="main.deleteGroup(group.id, $index)" title="Delete group"><i class="material-icons">delete</i></md-button>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                    <md-input-container>
+                        <label>Product Group</label>
+                        <md-select ng-model="main.productGroup">
+                            <md-option ng-repeat="productGroup in main.productGroups" value="{{productGroup.id}}">
+                                {{productGroup.title}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><md-button class="addGroupPrice md-primary md-raised md-fab md-mini" ng-click="main.addGroupPrice()"><i class="material-icons ng-scope">add</i></md-button></td>
+                    </tr>
+                </table>
+                <div layout="row" layout-align="end center" style="margin-top: 20px">
+                    <md-button class="saveGroupPrice md-primary md-raised" ng-click="main.updateAllVariant()"><span class="glyphicon glyphicon-refresh"></span></md-button>
+                    <md-button class="saveGroupPrice md-primary md-raised" ng-click="main.saveGroupPrice()" ng-disabled="main.disabledSubmit">Save</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+        <md-card>
+            <span class="cartTitle">Product Groups</span>
+            <md-card-content>
+                <md-input-container>
+                    <label>Group title</label>
+                    <input ng-model="main.groupTitle">
+                </md-input-container>
+                <md-input-container>
+                    <md-button class="md-raised md-primary" ng-click="main.addProductGroup()">Add Group</md-button>
+                </md-input-container>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Quantity Price Breaks & Limit Purchase - Shopify application</title>
+
+        <meta name="description" content="This is documentation on Quantity Price Breaks & Limit Purchase application, which will help you to install and configure your app right.">
+        <meta name="author" content="ThanhBT">
+        <meta name="copyright" content="OmegaTheme">
+        <meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+        <meta name="date" content="2015-7-02T16:00:22+01:00">
+        <link rel="stylesheet" href="./css/documenter_style.css" media="all">
+
+        <script src="js/jquery.1.6.4.js"></script>
+        <script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+        <script src="js/jquery.easing.js"></script>
+
+
+        <script>document.createElement('section');
+                    var duration = 500, easing = 'swing';</script>
+        <script src="js/script.js"></script>
+
+        <style>
+            html{background-color:#EEEEEE;color:#383838;}
+            ::-moz-selection{background:#333636;color:#00B5E5;}
+            ::selection{background:#333636;color:#00B5E5;}
+            #documenter_sidebar #documenter_logo{background-image:url();}
+            a{color:#008C9E;}
+            hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+            #documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+            #documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+            #documenter_sidebar ol{border-top:1px solid #212424;}
+            #documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+            #documenter_sidebar ol a:hover{background:#333636;color:#00B5E5;border-top:1px solid #333636;}
+            #documenter_sidebar ol a.current{background:#333636;color:#00B5E5;border-top:1px solid #333636;}
+            #documenter_copyright{display:block !important;visibility:visible !important;}
+        </style>
+    </head>
+    <body>
+        <div id="documenter_sidebar">
+            <a href="#documenter_cover" id="documenter_logo"></a>
+            <ol id="documenter_nav">
+                <li><a class="current" href="#documenter_cover">Start</a></li>
+                <li><a href="#accordion_slider_installation">Quantity Price Breaks & Limit Purchase App Installation</a></li>
+                <li><a href="#app_configure_tutorial">App configure Tutorial</a></li>
+            </ol>
+            <div id="documenter_copyright">Copyright OmegaTheme 2015<br>
+                made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+            </div>
+        </div>
+        <div id="documenter_content">
+            <section id="documenter_cover">
+                <h1>Quantity Price Breaks & Limit Purchase</h1>
+                <h2>Fantastic Shopify App</h2>
+                <hr>
+                <ul>
+                    <li>Created: 26/10/2015</li>
+                    <li>By: Omegatheme.com</li>
+                    <li><a href=""></a></li>
+                    <li>Email: <a href="mailto:contact@omegatheme.com">contact@omegatheme.com</a></li>
+                </ul>
+                <p><i>This is documentation on Quantity Price Breaks & Limit Purchase application, which will help you to install and configure your app right.</i></p>
+            </section>
+            <section id="accordion_slider_installation">
+                <h3>Quantity Price Breaks & Limit Purchase App Installation</h3><hr class="notop">
+                <h4>Directly go to this link: <a href="https://apps.shopify.com/quantity-price-breaks-limit-purchase">https://apps.shopify.com/quantity-price-breaks-limit-purchase</a></h4>
+                <p class="guide-text">
+                    After you install this app, you need make some modifications in your theme, by through these step:
+                </p>
+                <h4>Step 1: go to shopify admin -> Online store -> Themes -> Edit HTML/CSS</h4>
+                <img src="./images/edithtml.png" alt="Admin page">
+                <h4>Step 2: Change in <strong>theme.liquid</strong> file</h4>
+                <p class="guide-text">
+                    Goto Layout folder -> theme.liquid
+                </p>
+                <img src="./images/theme.png" alt="Create campaign">
+                <p class="guide-text">
+                    At the end of file you can see body end tag
+                </p>
+                <img src="./images/theme1.png" alt="Create campaign">
+                <p class="guide-text">
+                    You need to add <code>{% include "ot-custom-cart" %}</code> on before this tag
+                </p>
+                <img src="./images/theme2.png" alt="Create campaign">
+                <h4>Step 3: Change in <strong>cart.liquid</strong> or <strong>cart-template.liquid</strong> file</h4>
+                <p class="guide-text">
+                    Goto Templates folder -> cart.liquid
+                </p>
+                <img src="./images/cart.png" alt="Create campaign">
+                <p class="guide-text">
+                    Go through this file you can see this line
+                </p>
+                <img src="./images/cart1.png" alt="Create campaign">
+                <p class="guide-text">
+                    Note: We need to follow element tag with <code>name="updates[]"</code> attribute
+                </p>
+                <p class="guide-text">
+                    Then add <code>data-id="{{item.id}}"</code> attribute into this tag
+                </p>
+                <img src="./images/cart2.png" alt="Create campaign">
+				<p></p>
+				<p class="guide-text">About theme, please Goto Sections folder -> cart-template.liquid</p>	
+				<img src="./images/cart3.png" alt="Create campaign">
+                <h4>Step 4: Disable ajax cart</h4>
+                <p class="guide-text">
+                    If you disable ajax cart in your shop then when your customer click to Add To Cart button they will redirect to your cart page immediately.
+                    (if your shop already run by this way, so you don't need to do this step )
+                </p>
+                <p class="guide-text">
+                    Disable ajax cart may different in different theme. Here're guide to disable ajax cart in some familiar theme:
+                </p>
+                <p class="guide-text">
+                    Go to shopify Admin -> Online store -> Themes -> Customize theme
+                </p>
+                <img src="./images/ajax.png" alt="Create campaign">
+                <p class="guide-text">
+                    Go to Cart page -> Cart type -> Page and Save
+                </p>
+                <img src="./images/ajax1.png" alt="Create campaign">
+                <img src="./images/ajax2.png" alt="Create campaign">
+            </section>
+            <section id="app_configure_tutorial">
+                <h3>App configure Tutorial</h3><hr class="notop">
+                <p class="guide-text">
+                    After installed Quantity Price Breaks & Limit Purchase App you will be redirect to admin page.
+                </p>
+                <img src="./images/admin.png" alt="Admin page">
+                <p class="guide-text">
+                    We have 3 main tab:
+                </p>
+                <img src="./images/menu.png" alt="Admin page">
+                <ul>
+                    <li><strong>QUANTITY PRICE BREAKS:</strong> Manager quantity price breaks feature</li>
+                    <li><strong>LIMIT PRODUCT ORDER:</strong> Manager limit product order feature</li>
+                    <li><strong>STYLE OPTIONS:</strong> Manager styles to show</li>
+                </ul>
+                <h4>1. QUANTITY PRICE BREAKS</h4>
+                <img src="./images/quantity.png" alt="Admin page">
+                <p class="guide-text">
+                    To set quantity price breaks for a product. You need to follow these steps:
+                </p>
+                <h5>Step 1: Click to product you want to set.</h5>
+                <h5>Step 2: Select variant of product you want to set.</h5>
+                <h5>Step 3: Put quantity break info and save.</h5>
+                <img src="./images/quantity1.png" alt="Create campaign">
+                <p class="guide-text">
+                    In example upper, I just made quantity price breaks of variant: L price is 650.00 VND of product: Product 100 that if customer buy this product variant with quantity 5 or above, the price per product will be 645.00 VND.
+                </p>
+                <p class="guide-text">
+                    In case you want to make quantity price breaks for all variants of a product, you need to do these step again with another variants that you want.
+                </p>
+                <p class="guide-text">
+                    Same on another products.
+                </p>
+                <p class="guide-text">
+                    We provide a table data to show the quantity price breaks automaticity in your product page.
+                </p>
+                <p class="guide-text">
+                    You just put <code>gr0upt4bl3</code> to your product description or put it in your product template.
+                </p>
+                <h4>2. LIMIT PRODUCT ORDER</h4>
+                <img src="./images/limit.png" alt="Admin page">
+                <p class="guide-text">
+                    To set limit quantity purchase for a product. You need to follow these steps:
+                </p>
+                <h5>Step 1: Click to product you want to set.</h5>
+                <h5>Step 2: Select variant of product you want to set.</h5>
+                <h5>Step 3: Put limit number and save.</h5>
+                <img src="./images/limit1.png" alt="Create campaign">
+                <p class="guide-text">
+                    In example upper, I just made the minimum number to purchase of variant: X of product: Product 10 is 2 and maximum is 20.
+                </p>
+                <p class="guide-text">
+                    Then when customer add product variant to cart and the number not valid to our condition, it will appear an error notification and disable checkout button
+                </p>
+                <img src="./images/limit2.png" alt="Create campaign">
+                <img src="./images/limit3.png" alt="Create campaign">
+                <p class="guide-text">
+                    In case you want to make limit for all variants of a product, you need to do these step again with another variants that you want.
+                </p>
+                <p class="guide-text">
+                    Same on another products.
+                </p>
+                <h4>3. STYLE OPTIONS</h4>
+                <p class="guide-text">DESCRIPTION TABLE</p>
+                <p class="guide-text">Change style of Quantity price breaks table</p>
+                <table>
+                    <tr>
+                        <th style="width: 10%">Field Name</th>
+                        <th style="width: 10%">Type</th>
+                        <th style="width: 70%">Description</th>
+                        <th style="width: 10%">Default</th>
+                    </tr>
+                    <tr>
+                        <td>Heading size</td>
+                        <td>Number</td>
+                        <td>Table heading size (pixel)</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Heading color</td>
+                        <td>Color</td>
+                        <td>Table heading color</td>
+                        <td>#333333</td>
+                    </tr>
+                    <tr>
+                        <td>Border size</td>
+                        <td>Number</td>
+                        <td>Size of table border</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Border color</td>
+                        <td>Color</td>
+                        <td>Table border color</td>
+                        <td>#d3d3d3</td>
+                    </tr>
+                    <tr>
+                        <td>Width</td>
+                        <td>Text</td>
+                        <td>With of table (percent or pixel)</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Text size</td>
+                        <td>Number</td>
+                        <td>Text size</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Text color</td>
+                        <td>Color</td>
+                        <td>Text color</td>
+                        <td>#555555</td>
+                    </tr>
+                    <tr>
+                        <td>Show Heading</td>
+                        <td>Checkbox</td>
+                        <td>Show heading of table</td>
+                        <td>Checked</td>
+                    </tr>
+                    <tr>
+                        <td>Quantity Break Heading</td>
+                        <td>Text</td>
+                        <td>Heading of Quantity Break table</td>
+                        <td>Quantity Breaks</td>
+                    </tr>
+                    <tr>
+                        <td>Quantity Break Table Heading</td>
+                        <td>Text</td>
+                        <td>Quantity Heading</td>
+                        <td>Quantity</td>
+                    </tr>
+                    <tr>
+                        <td>Price table heading</td>
+                        <td>Text</td>
+                        <td>Price Heading</td>
+                        <td>Price per product</td>
+                    </tr>
+                    <tr>
+                        <td>Limit Heading</td>
+                        <td>Text</td>
+                        <td>Heading of Litmit Product table</td>
+                        <td>Purchase limits</td>
+                    </tr>
+                    <tr>
+                        <td>Min heading</td>
+                        <td>Text</td>
+                        <td>Min heading</td>
+                        <td>Minimum</td>
+                    </tr>
+                    <tr>
+                        <td>Max heading</td>
+                        <td>Text</td>
+                        <td>Max heading</td>
+                        <td>Maximum</td>
+                    </tr>
+                </table>
+                <p class="guide-text">LIMIT NOTIFICATION</p>
+                <p class="guide-text">Change style of limit notification</p>
+                <table>
+                    <tr>
+                        <th style="width: 10%">Field Name</th>
+                        <th style="width: 10%">Type</th>
+                        <th style="width: 70%">Description</th>
+                        <th style="width: 10%">Default</th>
+                    </tr>
+                    <tr>
+                        <td>Border size</td>
+                        <td>Number</td>
+                        <td>Border size</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Border color</td>
+                        <td>Color</td>
+                        <td>Border color</td>
+                        <td>#ff0000</td>
+                    </tr>
+                    <tr>
+                        <td>Background color</td>
+                        <td>Color</td>
+                        <td>Notification background color</td>
+                        <td>#ffffff</td>
+                    </tr>
+                    <tr>
+                        <td>Quantity border size</td>
+                        <td>Number</td>
+                        <td>Border size of variant invalid</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Quantity border color</td>
+                        <td>Number</td>
+                        <td>Border color of variant invalid</td>
+                        <td>#ff0000</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>

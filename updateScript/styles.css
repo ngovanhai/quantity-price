@@ -1,0 +1,237 @@
+.totalUser{
+
+    z-index: 99;
+    
+    position: fixed;
+    
+    top: 10%;
+    
+    left: 0;
+    
+    padding-left: 0;
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: #3147a4;
+        border-color: #3248a5;
+    }
+    .btn-secondary {
+        color: #3248a5;
+        background-color: #ffffff;
+        border-color: #3145a3;
+    }
+    .totalUser li{
+        
+list-style: none;
+        
+margin-bottom: 5px;
+        
+/* background: #007bfe; */
+        
+padding: 15px 10px;
+        
+cursor: pointer;
+        
+/* background-image: linear-gradient(#d53445, white); */
+        
+font-weight: bold;
+        
+text-align: right;
+        
+font-size: 15px;
+        
+box-shadow: 1px 1px #bdbdbd6e;
+    }
+    .totalUser li a{
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .totalUsing{
+    
+background-image: linear-gradient(#d85c69, white);
+    }
+    .totalUninstall{
+    
+background-image: linear-gradient(#e5c114c4, white);
+    }
+    .totalDeactive{
+    
+background-image: linear-gradient(#0da166bf, white);
+    }
+    .totalDisableApp{
+        background-image: linear-gradient(#bdbdbdc4, white);
+    }
+    .wrapper_banner {
+        background: #5563c1;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0px;
+        font-size: 36px;
+        padding-bottom: 45px;
+        text-transform: uppercase;
+        background: linear-gradient(40deg, #45cafc, #303f9f) !important;
+    }
+    
+    .wp_data {
+        background: #ffff;
+        /* margin-top: -30px; */
+        padding: 5px 15px;
+        box-shadow: -1px 4px 6px #8484843b;
+    }
+    
+    .btn-xanh:hover {
+        background-color: #3b78dd !important
+    }
+    
+    .btn-xanh {
+        background-color: #4285f4 !important;
+        border-radius: 0;
+        color: #fff;
+        -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+        box-shadow: 0 5px 11px 0 rgba(186, 186, 186, 0.18), 0 4px 15px 0 rgba(151, 150, 150, 0.15);
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+    
+    .formSendEmail .btn {
+        margin: .375rem;
+        color: inherit;
+        text-transform: uppercase;
+        word-wrap: break-word;
+        white-space: normal;
+        cursor: pointer;
+        border: 0;
+        border-radius: .125rem;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+        padding: 5px 14px;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .formSendEmail .btnSendEmail {
+        background: #4285f4 !important;
+        color: #fff;
+    }
+    
+    .btn-xanh i {
+        color: #fff;
+    }
+    
+    .table td,
+    .table th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    
+    .form-control,
+    body,
+    .btn {
+        font-size: 12px;
+    }
+    
+    .wrapper_banner {
+        font-size: 15px;
+    }
+    
+    .status {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        border: 1px solid var(--p-surface, #fff);
+        border-radius: 18px;
+        line-height: 12px;
+        color: var(--p-text, #454f5b);
+        font-weight: var(--p-badge-font-weight, 400);
+    }
+    .progress{
+        margin-bottom: 0 !important;
+        margin-top: 5px;
+        height: 5px;
+        border: 0.25px solid #00000000;
+        box-shadow: 1px 1px 4px #0000001f;
+    }
+    .progress-bar{
+
+/* background-color: #0fbf78; */
+
+/* border: 1px solid black; */
+
+}
+    .totalUsing .progress-bar{
+
+background-color: #d85c69;
+
+}
+
+    .totalUninstall .progress-bar{
+
+background-color: #fdd100;
+
+}
+    .totalDeactive .progress-bar{
+
+background-color: #0fbf78;
+
+}
+.totalUsing i{
+    color: #fa001a;
+}
+.totalUninstall i{
+    color: #f4cb05;
+}
+.totalDeactive i{
+    color: #00e812;
+}
+    .table  .active,
+    .table  .enable {
+        background-color: var(--p-surface-success, #bbe5b3);
+        color: #414f3e;
+    }
+    
+    .deactive {
+        background-color: var(--p-action-secondary-disabled, #dfe3e8);
+        color: #414f3e;
+    }
+    :focus {
+        outline: -webkit-focus-ring-color auto 0px !important;
+    }
+    .disable {
+        background-color: #ffea8a;
+        color: #595130;
+    }
+    .modal-footer{
+        display:none;
+    }
+    #wp_list_script .nav-tabs {
+        text-align: center;
+        width: 64%;
+        margin: auto;
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .nav-tabs {
+        border-bottom: 1px solid #3045a3;
+    }
+    .nav-tabs .nav-item {
+        margin-bottom: -1px;
+        font-weight: 500;
+    }
+    .nav-tabs .nav-link.active {
+        color: #495057;
+        background-color: #fff;
+        border-color: #dee2e6 #dee2e6 #fff;
+        background: #3142a1;
+        color: #fff;
+        background: linear-gradient(40deg, #3040a0, #43c2f6) !important;
+    }

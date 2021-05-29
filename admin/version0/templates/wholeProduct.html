@@ -1,0 +1,93 @@
+<div class="wrapperWhole"> 
+    <div layout="row" layout-wrap>
+        <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+            <md-card>  
+    <span class="cartTitle" ng-if="whole.typeWhole == 0">Product list</span>
+    <span class="cartTitle" ng-if="whole.typeWhole == 1">Collection list</span>
+    <md-select ng-model="whole.typeWhole">
+        <md-option  ng-value="0"  ng-click="reset()">  Product </md-option>
+        <md-option  ng-value="1" ng-click="reset()">  Conllection </md-option>
+    </md-select> 
+    <md-card-content ng-show="whole.typeWhole == 0">
+        <table ng-table="whole.tableParams" class="table" show-filter="true">
+            <tr ng-repeat="user in $data" ng-click="whole.selectProduct(user.id, user)">
+                <td filter="{ title: 'text'}">
+                                {{user.title}}
+                            </td>
+                        </tr>
+                    </table>
+                </md-card-content>
+                <md-card-content ng-show="whole.typeWhole == 1">
+                    <table ng-table="whole.tableParamsCollection" class="table" show-filter="true">
+                        <tr ng-repeat="user in $data" ng-click="whole.selectProduct(user.id, user)">
+                            <td filter="{ title: 'text'}" style="padding: 9px 0px;">
+                                {{user.title}}
+                            </td>
+                        </tr>
+                    </table>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div layout="column" flex="30" flex-sm="100" flex-xs="100">
+            <md-card>
+                <span class="cartTitle" ng-if="whole.typeWhole == 0">Product Choosen</span>
+                <span class="cartTitle" ng-if="whole.typeWhole == 1">Conllection Choosen</span>
+                <md-card-content style="max-height: 425px; overflow: auto;">
+                    <ul class="choosenProduct">
+                        <li  ng-repeat="(index,group) in whole.productChoosen">{{group.title}} 
+                            <a ng-click="whole.removeProductChoosen(group.id)" class="removeChoosenProduct">X</a>
+                        </li> 
+                    </ul>
+                </md-card-content>
+            </md-card>
+        </div>
+         <div class="wrapperLoading" style="    width: 100%;
+    background: rgba(4, 4, 4, 0.14);
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 9999;" ng-if="whole.showImagesLoading">
+            <img src="images/loading.gif" alt="Loading" >
+        </div>
+        <div layout="column" flex="40" flex-sm="100" flex-xs="100">
+            <md-card>
+                <span class="cartTitle">Quantity price</span>
+                <md-card-content>
+                    <table style="width: 100%">
+                        <tr>
+                            <th style="width: 35%">Quantity</th>
+                            <th style="width: 20%">
+                                Percent
+                            </th> 
+                        </tr>
+                        <tr ng-model="group.id" ng-repeat="group in whole.groups">
+                            <td>
+                        <md-input-container>
+                            <input type="number" ng-model="group.number" class="customInputPriceGroup">
+                            <span class="andAbove">and above</span>
+                        </md-input-container>
+                        </td> 
+                        <td>
+                        <md-input-container>
+                            <input type="number" ng-model="group.percent">
+                        </md-input-container>
+                        </td>
+                        <td>
+                        <md-button ng-cloak md-no-ink class="btnList md-raised md-warn md-fab md-mini" ng-click="whole.deleteGroup(group.id, $index)" title="Delete group"><i class="material-icons">delete</i></md-button>
+                        </td>
+                        </tr>
+                        <tr> 
+                            <td><md-button class="addGroupPrice md-primary md-raised md-fab md-mini" ng-click="whole.addGroupPrice()"><i class="material-icons ng-scope">add</i></md-button></td>
+                        </tr>
+                    </table>
+                    <div layout="row" layout-align="end center" style="margin-top: 20px">
+                        <md-button class="saveGroupPrice md-primary md-raised" ng-click="whole.saveWholeProduct()" ng-disabled="whole.disabledSubmit">Save</md-button>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+
+    </div>
+
+</div> 
+<!--<a class="plusListWhole" ng-click="showDivAdd()"><span class="glyphicon glyphicon-plus"></span></a>-->

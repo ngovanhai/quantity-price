@@ -1,0 +1,142 @@
+<div layout="row" layout-wrap>
+    <div flex="50" flex-xs="100" flex-sm="100">
+        <md-card>
+            <span class="cartTitle">Description table</span>
+            <md-card-content layout="row" layout-wrap>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Heading size</label>
+                    <input type="number" ng-model="st.settings.table_heading_size">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Heading color</label>
+                    <input type="color" ng-model="st.settings.table_heading_color" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Border size</label>
+                    <input type="number" ng-model="st.settings.table_border_size">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Border color</label>
+                    <input type="color" ng-model="st.settings.table_border_color" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Width</label>
+                    <input type="text" ng-model="st.settings.table_width">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Text size</label>
+                    <input type="number" ng-model="st.settings.table_text_size">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Text color</label>
+                    <input type="color" ng-model="st.settings.table_text_color" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Show heading</label>
+                    <input type="checkbox" ng-model="st.settings.show_heading1" ng-checked="st.settings.show_heading1">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Quantity Break Heading</label>
+                    <input type="text" ng-model="st.settings.groups_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Quantity break table heading</label>
+                    <input type="text" ng-model="st.settings.group_table_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Price table heading</label>
+                    <input type="text" ng-model="st.settings.price_table_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Limits heading</label>
+                    <input type="text" ng-model="st.settings.limits_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Min heading</label>
+                    <input type="text" ng-model="st.settings.min_table_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Max heading</label>
+                    <input type="text" ng-model="st.settings.max_table_heading">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Table text 1</label>
+                    <input type="text" ng-model="st.settings.table_text1">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Table text 2</label>
+                    <input type="text" ng-model="st.settings.table_text">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Total Amount text</label>
+                    <input type="text" ng-model="st.settings.total_amount_text">
+                </md-input-container>				
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Enable Quantity Break by tag</label>
+                    <input type="checkbox" ng-model="st.settings.use_tag1" ng-checked="st.settings.use_tag1">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100" ng-show="st.settings.use_tag1">
+                    <label>Customer tag</label>
+                    <input type="text" ng-model="st.settings.customer_tag">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Use Percent discount</label>
+                    <input type="checkbox" ng-model="st.settings.show_percent1" ng-checked="st.settings.show_percent1">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Show Total Amount column</label>
+                    <input type="checkbox" ng-model="st.settings.show_total_amount1" ng-checked="st.settings.show_total_amount1">
+                </md-input-container>				
+                <div flex="100" layout-align="end center">
+                    <md-button style="float: right" class="saveSettings md-primary md-raised" ng-click="st.saveSettings()" ng-disabled="st.saveSettingsDisable">Save</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div flex="50" flex-xs="100" flex-sm="100">
+        <md-card>
+            <span class="cartTitle">Limit Notification</span>
+            <md-card-content layout="row" layout-wrap>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Border size</label>
+                    <input type="number" ng-model="st.settings.limit_border_size">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Border color</label>
+                    <input type="color" ng-model="st.settings.limit_border_color" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Background color</label>
+                    <input type="color" ng-model="st.settings.limit_background" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Text color</label>
+                    <input type="color" ng-model="st.settings.limit_text_color" style="width: 30px">
+                </md-input-container>				
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Quantity border size</label>
+                    <input type="number" ng-model="st.settings.input_border_size">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Minimum Limit Text</label>
+                    <input type="text" ng-model="st.settings.min_text">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Maximum Limit Text</label>
+                    <input type="text" ng-model="st.settings.max_text">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Quantity border color</label>
+                    <input type="color" ng-model="st.settings.input_border_color" style="width: 30px">
+                </md-input-container>
+                <md-input-container flex="50" flex-xs="100">
+                    <label>Check Limit on Product Page</label>
+                    <input type="checkbox" ng-model="st.settings.limit_on_product1" ng-checked="st.settings.limit_on_product1">
+                </md-input-container>
+                <div flex="100" layout-align="end center">
+                    <md-button style="float: right" class="saveSettings md-primary md-raised" ng-click="st.saveSettings()" ng-disabled="st.saveSettingsDisable">Save</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
